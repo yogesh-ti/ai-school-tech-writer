@@ -39,8 +39,8 @@ def call_openai(prompt) -> str:
 
     try:
         messages = [
-            {"role": "System", "content": "You are an AI trained to help with updating README files based on commit messages and code files"},
-            {"role": "User", "content": prompt}
+            {"role": "system", "content": "You are an AI trained to help with updating README files based on commit messages and code files"},
+            {"role": "user", "content": prompt}
         ]
         response = client.invoke(input=messages)
         parser = StrOutputParser()
