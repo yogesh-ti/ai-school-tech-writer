@@ -35,7 +35,7 @@ def format_data_for_openai(diffs, readme_content, commit_messages):
     return prompt
 
 def call_openai(prompt) -> str:
-    client = ChatOpenAI(api_key=os.environ["OPENAPI_API_KEY"], model="gpt-3.5-turbo-0125")
+    client = ChatOpenAI(api_key=os.environ["OPENAI_API_KEY"], model="gpt-3.5-turbo-0125")
 
     try:
         messages = [
